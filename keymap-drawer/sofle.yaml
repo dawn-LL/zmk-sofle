@@ -59,7 +59,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:progress-download$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - HOME
   - {t: '$$mdi:backspace$$', h: '$$mdi:backspace-reverse-outline$$'}
