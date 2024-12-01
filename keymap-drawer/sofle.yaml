@@ -52,19 +52,19 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - '&soft_off'
+  - \
   - $$mdi:volume-off$$
   - layer1
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
-  - $$mdi:progress-download$$
+  - '&soft_off'
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - HOME
   - {t: '$$mdi:backspace$$', h: '$$mdi:backspace-reverse-outline$$'}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - '2'
   layer1:
   - {t: '`', s: '~'}
   - F1
@@ -194,4 +194,4 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
