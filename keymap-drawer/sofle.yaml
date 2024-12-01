@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: \, s: '|'}
+  - '&soft_off'
   - $$mdi:volume-off$$
   - layer1
   - $$mdi:apple-keyboard-control$$
