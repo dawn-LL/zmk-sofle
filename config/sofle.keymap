@@ -11,7 +11,7 @@
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  //  600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 10    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 50    // 10
 
 / {
     behaviors {
