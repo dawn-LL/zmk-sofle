@@ -50,20 +50,6 @@
             bindings = <&kp LG(C) &kp LS(LG(O)) &kp LG(V) &kp ENTER>;
             label = "COPY_SHIFT_CMD_O";
         };
-
-        shift_cmd_j: shift_cmd_j {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LG(J))>;
-            label = "SHIFT_CMD_J";
-        };
-
-        shift_cmd_a: shift_cmd_a {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LG(A))>;
-            label = "SHIFT_CMD_A";
-        };
     };
 
     keymap {
@@ -71,11 +57,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1            &kp N2        &kp N3            &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8           &kp N9             &kp N0             &kp BACKSPACE
-&kp TAB     &kp Q             &kp W         &kp E             &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I            &kp O              &kp P              &kp LEFT_BRACE
-&kp CAPS    &kp A             &kp S         &kp D             &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K            &kp L              &kp SEMI           &kp EQUAL
-&kp LSHFT   &kp Z             &kp X         &kp C             &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA        &kp DOT            &kp FSLH           &kp ENTER
-&kp C_MUTE  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 1     &kp ENTER        &mo 2   &kp SPACE  &kp RIGHT_SHIFT  &copy_shift_cmd_f  &copy_shift_cmd_o
+&kp ESC         &kp N1         &kp N2        &kp N3            &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8           &kp N9             &kp N0             &kp BACKSPACE
+&kp TAB         &kp Q          &kp W         &kp E             &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I            &kp O              &kp P              &kp EQUAL
+&kp LEFT_SHIFT  &kp A          &kp S         &kp D             &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K            &kp L              &kp SEMI           &kp LEFT_BRACE
+&kp LCTRL       &kp Z          &kp X         &kp C             &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA        &kp DOT            &kp FSLH           &kp ENTER
+&kp C_MUTE      &kp LS(LG(A))  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 1     &kp ENTER        &mo 2   &kp SPACE  &kp RIGHT_SHIFT  &copy_shift_cmd_f  &copy_shift_cmd_o
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -84,11 +70,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9        &kp F10        &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME      &kp MINUS      &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT     &kp BACKSLASH  &kp PIPE
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11       &kp F12        &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &shift_cmd_j  &shift_cmd_a
+&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9         &kp F10        &trans
+&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME       &kp MINUS      &kp EQUAL
+&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT      &kp BACKSLASH  &kp PIPE
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11        &kp F12        &trans
+&kp C_MUTE  &sys_reset       &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &kp RS(RG(J))  &sys_reset
             >;
 
             display-name = "layer1";
