@@ -26,8 +26,8 @@ layers:
   - I
   - O
   - P
-  - '{'
-  - $$mdi:apple-keyboard-caps$$
+  - {t: '=', s: +}
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -39,8 +39,8 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '=', s: +}
-  - $$mdi:apple-keyboard-shift$$
+  - '{'
+  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
@@ -54,7 +54,7 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:volume-off$$
-  - $$mdi:apple-keyboard-control$$
+  - Sft+Gui+ A
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
@@ -119,7 +119,7 @@ layers:
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -128,8 +128,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&shift_cmd_j'
-  - '&shift_cmd_a'
+  - Sft+Gui+ J
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   '2':
   - '~'
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
