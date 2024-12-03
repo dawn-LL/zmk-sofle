@@ -36,16 +36,32 @@
         tap-ms = <30>;
     };
 
+    macros {
+        copy_shift_cmd_f: copy_shift_cmd_f {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C) &kp LS(LG(F)) &kp LG(V) &kp ENTER>;
+            label = "COPY_SHIFT_CMD_F";
+        };
+
+        copy_shift_cmd_o: copy_shift_cmd_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C) &kp LS(LG(O)) &kp LG(V) &kp ENTER>;
+            label = "COPY_SHIFT_CMD_O";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1            &kp N2        &kp N3            &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8                &kp N9           &kp N0             &kp MINUS
-&kp TAB     &kp Q             &kp W         &kp E             &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I                 &kp O            &kp P              &kp EQUAL
-&kp CAPS    &kp A             &kp S         &kp D             &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K                 &kp L            &kp SEMI           &kp APOS
-&kp LSHFT   &kp Z             &kp X         &kp C             &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA             &kp DOT          &kp FSLH           &kp LEFT_BRACE
-&kp C_MUTE  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 1     &kp ENTER        &mo 2   &kp ENTER  &mt DELETE BACKSPACE  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND
+&kp ESC     &kp N1            &kp N2        &kp N3            &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8           &kp N9             &kp N0             &mt DELETE BACKSPACE
+&kp TAB     &kp Q             &kp W         &kp E             &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I            &kp O              &kp P              &kp LEFT_BRACE
+&kp CAPS    &kp A             &kp S         &kp D             &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K            &kp L              &kp SEMI           &kp ENTER
+&kp LSHFT   &kp Z             &kp X         &kp C             &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA        &kp DOT            &kp FSLH           &kp EQUAL
+&kp C_MUTE  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 1     &kp ENTER        &mo 2   &kp SPACE  &kp RIGHT_SHIFT  &copy_shift_cmd_f  &copy_shift_cmd_o
             >;
 
             sensor-bindings = <&scroll_encoder>;
